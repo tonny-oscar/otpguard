@@ -1,0 +1,7 @@
+# Testing dependencies — install with: pip install -r requirements-test.txt
+-r requirements.txt
+
+pytest==8.3.5
+pytest-cov==6.0.0
+pytest-mock==3.14.0
+coverage==7.6.10

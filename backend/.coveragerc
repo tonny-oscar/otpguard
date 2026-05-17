@@ -1,0 +1,22 @@
+[run]
+source = app
+omit =
+    app/logging_config.py
+    app/sentry.py
+    app/monitoring.py
+    app/email_templates.py
+
+[report]
+fail_under = 80
+show_missing = true
+skip_covered = false
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if TYPE_CHECKING:
+    @abstractmethod
+
+[html]
+directory = htmlcov
+title = OTPGuard Coverage Report

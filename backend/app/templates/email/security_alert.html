@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2 style="color:#f87171;font-size:1.4rem;font-weight:800;margin:0 0 8px;">
+    🚨 Security Alert
+  </h2>
+  <p style="color:#94a3b8;margin:0 0 24px;font-size:.95rem;">
+    Hi {{ name }}, we detected unusual activity on your account.
+  </p>
+
+  <div style="background:#0a0e1a;border:1px solid #1e2d4a;border-radius:12px;
+              padding:20px;margin-bottom:24px;">
+    <div style="margin-bottom:12px;">
+      <span style="color:#64748b;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;">Event</span>
+      <div style="color:#f1f5f9;font-weight:700;margin-top:4px;">{{ event }}</div>
+    </div>
+    <div style="margin-bottom:12px;">
+      <span style="color:#64748b;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;">IP Address</span>
+      <div style="color:#f1f5f9;font-weight:700;margin-top:4px;">{{ ip }}</div>
+    </div>
+    <div>
+      <span style="color:#64748b;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;">Location</span>
+      <div style="color:#f1f5f9;font-weight:700;margin-top:4px;">{{ location }}</div>
+    </div>
+  </div>
+
+  <p style="color:#94a3b8;font-size:.88rem;margin:0 0 16px;">
+    If this was you, no action is needed. If you don't recognize this activity,
+    please secure your account immediately.
+  </p>
+
+  <a href="https://otpguard-1.onrender.com/dashboard"
+     style="display:block;text-align:center;background:rgba(248,113,113,.15);
+            border:1px solid rgba(248,113,113,.3);
+            color:#f87171;font-weight:700;font-size:.9rem;padding:12px;border-radius:10px;
+            text-decoration:none;">
+    Review Account Activity →
+  </a>
+{% endblock %}

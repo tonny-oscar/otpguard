@@ -1131,7 +1131,8 @@ If you suspect a compromise:
             ForumPost(author_name='Carol W.', title='Best practices for OTP expiry time?',
                       body='We\'re debating whether to use 5-minute or 10-minute OTP expiry. What does everyone use? Any security considerations?',
                       category='security', tags='["otp","security","expiry"]', upvotes=15, views=120, is_answered=True),
-        ]
+        ] 
+
         for p in sample_posts:
             db.session.add(p)
         db.session.flush()

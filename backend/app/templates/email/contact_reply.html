@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2 style="color:#f1f5f9;font-size:1.4rem;font-weight:800;margin:0 0 8px;">
+    💬 Reply from OTPGuard Support
+  </h2>
+  <p style="color:#94a3b8;margin:0 0 24px;font-size:.95rem;">
+    Hi {{ name }}, here's our response to your message.
+  </p>
+
+  <div style="color:#f1f5f9;line-height:1.8;font-size:.95rem;
+              white-space:pre-wrap;margin-bottom:28px;">
+    {{ reply_body }}
+  </div>
+
+  <div style="background:#0a0e1a;border:1px solid #1e2d4a;border-radius:8px;
+              padding:16px;margin-bottom:24px;">
+    <p style="color:#64748b;font-size:.75rem;margin:0 0 8px;
+              text-transform:uppercase;letter-spacing:.5px;">
+      Your original message
+    </p>
+    <p style="color:#94a3b8;font-size:.85rem;margin:0;white-space:pre-wrap;">
+      {{ original_message }}
+    </p>
+  </div>
+
+  <p style="color:#475569;font-size:.8rem;margin:0;">
+    Need more help? Reply to this email or visit our
+    <a href="https://otpguard-1.onrender.com/docs" style="color:#00ff88;">documentation</a>.
+  </p>
+{% endblock %}

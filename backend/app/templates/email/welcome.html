@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2 style="color:#f1f5f9;font-size:1.4rem;font-weight:800;margin:0 0 8px;">
+    👋 Welcome to OTPGuard, {{ name }}!
+  </h2>
+  <p style="color:#94a3b8;margin:0 0 24px;font-size:.95rem;">
+    Your account is ready. You're on the
+    <strong style="color:#00ff88;">{{ plan | capitalize }}</strong> plan.
+  </p>
+
+  <div style="border-top:1px solid #1e2d4a;padding-top:24px;margin-bottom:24px;">
+    {% for icon, title, desc in features %}
+    <div style="display:flex;align-items:flex-start;margin-bottom:16px;">
+      <span style="font-size:1.2rem;margin-right:12px;">{{ icon }}</span>
+      <div>
+        <div style="color:#f1f5f9;font-weight:700;font-size:.9rem;">{{ title }}</div>
+        <div style="color:#64748b;font-size:.82rem;margin-top:2px;">{{ desc }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <a href="https://otpguard-1.onrender.com/dashboard"
+     style="display:block;text-align:center;background:linear-gradient(135deg,#00ff88,#00cc6a);
+            color:#0a0e1a;font-weight:800;font-size:1rem;padding:14px;border-radius:10px;
+            text-decoration:none;">
+    Go to Dashboard →
+  </a>
+{% endblock %}

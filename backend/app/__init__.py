@@ -40,11 +40,13 @@ def create_app(env=None):
     mail.init_app(app)
     limiter.init_app(app)
 
-    # ── Structured logging + Sentry ───────────────────────────────
+    # ── Structured logging + Sentry + Metrics ────────────────────
     from app.logging_config import setup_logging
     from app.sentry import init_sentry
+    from app.metrics import init_metrics
     setup_logging(app)
     init_sentry(app)
+    init_metrics(app)
 
     # ── CORS ──────────────────────────────────────────────────────
     CORS(app,

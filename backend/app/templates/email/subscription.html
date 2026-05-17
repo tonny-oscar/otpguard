@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2 style="color:#f1f5f9;font-size:1.4rem;font-weight:800;margin:0 0 8px;">
+    {{ icon }} {{ title }}
+  </h2>
+  <p style="color:#94a3b8;margin:0 0 24px;font-size:.95rem;">
+    Hi {{ name }}, {{ subtitle }}
+  </p>
+
+  <div style="background:rgba(0,255,136,.06);border:1px solid rgba(0,255,136,.15);
+              border-radius:12px;padding:20px;text-align:center;margin-bottom:24px;">
+    <div style="color:#64748b;font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;">
+      Current Plan
+    </div>
+    <div style="color:#00ff88;font-size:1.8rem;font-weight:900;margin-top:8px;">
+      {{ plan | capitalize }}
+    </div>
+  </div>
+
+  <a href="https://otpguard-1.onrender.com/dashboard"
+     style="display:block;text-align:center;background:linear-gradient(135deg,#00ff88,#00cc6a);
+            color:#0a0e1a;font-weight:800;font-size:1rem;padding:14px;border-radius:10px;
+            text-decoration:none;">
+    View Dashboard →
+  </a>
+{% endblock %}
