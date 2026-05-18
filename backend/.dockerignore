@@ -21,3 +21,6 @@ server.log
 .pytest_cache
 htmlcov
 .coverage
+
+!nginx/
+!nginx/frontend.conf
