@@ -5,5 +5,4 @@ dist
 *.md
 .env*
 backend
-nginx
 public/sw.js
