@@ -64,7 +64,7 @@ ps:
 
 # ── Database migration ────────────────────────────────────────────
 migrate:
-	docker compose exec backend python migrate_subscriptions.py
+	docker compose exec backend alembic upgrade head
 
 # ── Shells ────────────────────────────────────────────────────────
 shell-backend:

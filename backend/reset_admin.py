@@ -36,11 +36,10 @@ with app.app_context():
     u = User.query.filter_by(email='admin@otpguard.co.ke').first()
     check = bcrypt.checkpw(b'Admin1234!', u.password_hash.encode())
 
-    with open('reset_result.txt', 'w') as f:
-        f.write(f"Email: {u.email}\n")
-        f.write(f"Role: {u.role}\n")
-        f.write(f"Active: {u.is_active}\n")
-        f.write(f"MFA: {u.mfa_enabled}\n")
-        f.write(f"Password check: {check}\n")
-        f.write(f"Total users: {User.query.count()}\n")
-        f.write("SUCCESS\n")
+    print(f"Email: {u.email}")
+    print(f"Role: {u.role}")
+    print(f"Active: {u.is_active}")
+    print(f"MFA: {u.mfa_enabled}")
+    print(f"Password check: {check}")
+    print(f"Total users: {User.query.count()}")
+    print("SUCCESS")

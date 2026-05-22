@@ -1,7 +1,0 @@
-Email: admin@otpguard.co.ke
-Role: admin
-Active: True
-MFA: False
-Password check: True
-Total users: 1
-SUCCESS

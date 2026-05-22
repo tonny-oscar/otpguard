@@ -175,7 +175,15 @@ class SubscriptionService:
         ).first()
         
         if not summary:
-            summary = UsageSummary(user_id=user_id, month=current_month)
+            summary = UsageSummary(
+                user_id=user_id,
+                month=current_month,
+                email_otp_count=0,
+                sms_otp_count=0,
+                totp_count=0,
+                total_users=0,
+                total_cost_kes=0,
+            )
             db.session.add(summary)
         
         # Update counters based on usage type

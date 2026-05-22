@@ -54,3 +54,10 @@ backend/instance/
 
 # Docker
 .docker/
+
+# Local IDE / agent config
+.claude/
+
+# Script output
+reset_result.txt
+backend/reset_result.txt
